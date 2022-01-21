@@ -15,6 +15,7 @@ class UserTest(unittest.TestCase):
         '''
         check if the object has been initialized correctly
         '''
+       
         self.assertEqual(self.new_user.username,'Danteiusimus')
         self.assertEqual(self.new_user.password,'yernannylovesmeballs')
 
