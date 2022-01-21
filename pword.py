@@ -2,7 +2,7 @@ class User:
     """
     generates new instances of a user.
     """
-    user = [] #open 
+    user_list = [] #open 
 
     def __init__(self, username, password):
         """
