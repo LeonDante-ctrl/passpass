@@ -19,7 +19,7 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.new_user.username,'Danteiusimus')
         self.assertEqual(self.new_user.password,'yernannylovesmeballs')
 
-     def test_save_user(self):
+    def test_save_user(self):
         """
         test case to test if a new user instance has been saved into the User list
         """
@@ -41,7 +41,13 @@ class TestCredentials(unittest.TestCase):
         """
         self.assertEqual(self.new_credential.account,'Gmail')
         self.assertEqual(self.new_credential.userName,'Leon_Dante')
-        self.assertEqual(self.new_credential.password,'fsdjis73')    
-
+        self.assertEqual(self.new_credential.password,'fsdjis73')  
+         
+    def save_credential_test(self):
+        """
+        checks if credential object is saved into the list.
+        """
+        self.new_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),1)
 if __name__ == "__main__":
     unittest.main()
